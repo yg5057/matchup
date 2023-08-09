@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>회원정보 수정 페이지</title>
+  </head>
+  <body>
+    <h1>회원정보 수정 페이지</h1>
+    <form>
+      <label for="password">비밀번호:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <button type="button" onclick="checkPassword()">확인</button>
+    </form>
+    <script>
+      function checkPassword() {
+        var password = document.getElementById("password").value;
+        if (password === "1234") {
+          window.location.href = "http://127.0.0.1:5501/html/mypage.html";
+        } else {
+          alert("비밀번호가 일치하지 않습니다.");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selectBox" onchange="handleSelectChange()">
+        <option id="0">지원사업명</option>
+        <option id="1">사업분야</option>
+        <option id="2">지자체</option>
+      </select>
+      <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>사업분야</th>
+                <th>지원사업명</th>
+                <th>신청기간</th>
+                <th>지자체</th>
+                <th>등록일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>금융</td>
+                <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                <td>2023-04-17 ~ 2023-12-31</td>
+                <td>산업통상 자원부</td>
+                <td>2023-04-03</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>금융</td>
+                <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                <td>2023-04-17 ~ 2023-12-31</td>
+                <td>산업통상 자원부</td>
+                <td>2023-04-03</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>function handleSelectChange() {
+    var selectValue = document.getElementById('selectBox').value;
+    alert(selectValue); 
+  }
+   </script>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="selectBox" onchange="handleSelectChange()">
+        <option value="지원사업명">지원사업명</option>
+        <option value="사업분야">사업분야</option>
+        <option value="지자체">지자체</option>
+    </select>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>사업분야</th>
+                <th>지원사업명</th>
+                <th>신청기간</th>
+                <th>지자체</th>
+                <th>등록일</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>금융</td>
+                <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                <td>2023-04-17 ~ 2023-12-31</td>
+                <td>산업통상 자원부</td>
+                <td>2023-04-03</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="2">금융</td>
+                <td><a href="./conts.html">생산자금(2023년·신재생에너지 금융지원사업 지원 공고)</a></td>
+                <td>2023-04-17 ~ 2023-12-31</td>
+                <td>산업통상 자원부</td>
+                <td>2023-04-03</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+<script>
+    function handleSelectChange() {
+        var selectValue = parseInt(document.getElementById('selectBox').value);
+        var table = document.querySelector('table');
+        for (var i = 1; i < table.rows.length; i++) {
+            var row = table.rows[i];
+            var cell = row.cells[selectValue];
+            if (selectValue === 0) {
+                cell.innerHTML = '<a href="./conts.html">변경된 값</a>';
+            } else {
+                cell.innerHTML = '변경된 값';
+            }
+        }
+    }
+    
+</script>
+</html>
